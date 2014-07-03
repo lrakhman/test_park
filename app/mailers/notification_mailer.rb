@@ -18,4 +18,10 @@ class NotificationMailer < ActionMailer::Base
       mail(:to => @subscriber.email)
   end
 
+  def email_name
+    mail :subject => "Mandrill rides the Rails!",
+         :to      => "lana.rakhman@gmail.com",
+         :from    => "4caad4lyfe@gmail.com"
+  end
+
 end

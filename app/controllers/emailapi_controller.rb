@@ -14,7 +14,9 @@ class EmailapiController < ApplicationController
 			})
 	end
 
-
+	def subscribe
+		NotificationMailer.email_name.deliver
+	end
 	# gb.campaigns.create({type: "regular", 
 	# 		options: {list_id: list_id, 
 	# 		subject: "Gibbon is cool", 
